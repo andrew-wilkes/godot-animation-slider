@@ -1,4 +1,4 @@
-# Godot Animation Sync
+# Godot Position Controlled Animation Player
 
 Synchronize an animation player position with a position input value.
 
