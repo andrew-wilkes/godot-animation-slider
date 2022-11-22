@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "PositionControlledAnimation",
+"language": "GDScript",
+"path": "res://Main.gd"
+} ]
+_global_script_class_icons={
+"PositionControlledAnimation": ""
+}
+
 [application]
 
 config/name="Animation Sync"
