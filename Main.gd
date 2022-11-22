@@ -1,6 +1,6 @@
 extends Node
 
-class_name PositionControlledAnimation
+class_name PositionControlledAnimationPlayer
 
 export(float, 0, 1) var target_position = 0.0 setget set_target_position
 export var closeness_factor = 0.01
