@@ -8,21 +8,15 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Node",
-"class": "PositionControlledAnimationPlayer",
-"language": "GDScript",
-"path": "res://Main.gd"
-} ]
-_global_script_class_icons={
-"PositionControlledAnimationPlayer": ""
-}
-
 [application]
 
 config/name="Animation Sync"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/position_controlled_animation_player/plugin.cfg" )
 
 [gui]
 
