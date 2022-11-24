@@ -19,6 +19,11 @@ func _ready():
 		slider = get_node(slider_node)
 		if slider is Slider:
 			slider.connect("value_changed", self, "_on_slider_value_changed")
+	if animation_name.empty():
+		set_process(false)
+	else:
+		play(animation_name)
+		seek(anim_target_position * current_animation_length, true)
 
 
 func _on_slider_value_changed(_value):
