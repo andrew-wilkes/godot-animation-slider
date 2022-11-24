@@ -2,6 +2,7 @@ tool
 
 extends AnimationPlayer
 
+export(NodePath) var slider_node
 export(float, 0, 1) var target_position = 0.0 setget set_target_position, get_target_position
 export var closeness_factor = 0.01
 export var animation_name = ""
@@ -9,15 +10,23 @@ export var animation_name = ""
 var anim_target_position = 0.0
 var anim_current_position = 0.0
 var anim_playing_forward = true
-var _dummy
+var slider
 
 func _ready():
 	if animation_name.empty() and get_animation_list().size() > 0:
 		animation_name = get_animation_list()[0]
+	if slider_node:
+		slider = get_node(slider_node)
+		if slider is Slider:
+			slider.connect("value_changed", self, "_on_slider_value_changed")
+
+
+func _on_slider_value_changed(_value):
+	anim_target_position = slider.ratio
 
 
 func set_target_position(pos):
-	anim_target_position = pos
+	anim_target_position = clamp(pos, 0, 1)
 
 
 func get_target_position():
