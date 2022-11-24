@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PCAnimationPlayer.svg-7f24783845ceebb5158b81a1938293c1.stex"
+path="res://.import/AnimationSlider.svg-7b0fade1abef7b2345a998ed0b738d8f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/position_controlled_animation_player/PCAnimationPlayer.svg"
-dest_files=[ "res://.import/PCAnimationPlayer.svg-7f24783845ceebb5158b81a1938293c1.stex" ]
+source_file="res://addons/animation_slider/AnimationSlider.svg"
+dest_files=[ "res://.import/AnimationSlider.svg-7b0fade1abef7b2345a998ed0b738d8f.stex" ]
 
 [params]
 

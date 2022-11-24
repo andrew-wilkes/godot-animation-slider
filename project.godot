@@ -10,13 +10,14 @@ config_version=4
 
 [application]
 
-config/name="Animation Sync"
+config/name="Animation Slider"
+config/description="Godot plugin"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/position_controlled_animation_player/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/animation_slider/plugin.cfg" )
 
 [gui]
 

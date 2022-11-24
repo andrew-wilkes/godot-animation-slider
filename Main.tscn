@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://addons/position_controlled_animation_player/pcam_script.gd" type="Script" id=3]
+[ext_resource path="res://addons/animation_slider/animation_slider.gd" type="Script" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Anim"
@@ -17,7 +17,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5, 1, 1.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 166, 281 ), Vector2( 254, 142 ), Vector2( 416, 267 ), Vector2( 681, 114 ) ]
+"values": [ Vector2( 174, 313 ), Vector2( 340, 120 ), Vector2( 502, 280 ), Vector2( 678, 194 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -32,14 +32,14 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 166, 281 ) ]
+"values": [ Vector2( 174, 313 ) ]
 }
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="Godot" type="Sprite" parent="."]
-position = Vector2( 166, 281 )
+position = Vector2( 174, 313 )
 texture = ExtResource( 2 )
 
 [node name="HSlider" type="HSlider" parent="."]
@@ -48,9 +48,8 @@ margin_top = 392.0
 margin_right = 665.0
 margin_bottom = 408.0
 
-[node name="PositionControlledAnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationSlider" type="AnimationPlayer" parent="."]
 anims/Anim = SubResource( 1 )
 anims/RESET = SubResource( 2 )
 script = ExtResource( 3 )
 slider_node = NodePath("../HSlider")
-animation_name = "Anim"
