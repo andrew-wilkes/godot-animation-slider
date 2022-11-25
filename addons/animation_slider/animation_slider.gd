@@ -4,7 +4,7 @@ extends AnimationPlayer
 
 export(NodePath) var slider_node
 export(float, 0, 1) var target_position = 0.0 setget set_target_position, get_target_position
-export var closeness_factor = 0.01
+export var closeness_factor = 0.03
 export var animation_name = ""
 
 var anim_target_position = 0.0
