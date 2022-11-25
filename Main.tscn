@@ -45,10 +45,12 @@ margin_left = 343.0
 margin_top = 392.0
 margin_right = 665.0
 margin_bottom = 408.0
+value = 50.0
 
 [node name="AnimationSlider" type="AnimationPlayer" parent="."]
 anims/Anim = SubResource( 1 )
 anims/RESET = SubResource( 2 )
 script = ExtResource( 3 )
 slider_node = NodePath("../HSlider")
+target_position = 0.5
 animation_name = "Anim"
