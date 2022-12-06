@@ -48,15 +48,11 @@ func _process(_delta):
 	else:
 		if anim_target_position > anim_current_position:
 			# Play forward to advance towards the target position
-			if not is_playing():
-				play(animation_name)
-			elif not anim_playing_forward:
+			if not is_playing() or not anim_playing_forward:
 				play(animation_name)
 			anim_playing_forward = true
 		else:
 			# Play backwards to move back towards the target position
-			if not is_playing():
-				play_backwards(animation_name)
-			elif anim_playing_forward:
+			if not is_playing() or anim_playing_forward:
 				play_backwards(animation_name)
 			anim_playing_forward = false
